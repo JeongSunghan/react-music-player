@@ -1,0 +1,46 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+  }
+  
+  .home-title {
+    font-size: 5rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: bold;
+  }
+  
+  .genre-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .genre-button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    margin-top: 2.5%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .genre-button:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+  }
+  
+  .genre-button:focus {
+    outline: none;
+    background-color: #1aa34a;
+  }
+  

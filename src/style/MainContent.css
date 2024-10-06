@@ -1,0 +1,173 @@
+/* 비디오 리스트 스타일 */
+.video-list-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.videoCard {
+  background-color: #181818;
+  margin-top: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+  transition: background-color 0.3s;
+  transform: translateY(0px);
+}
+
+.videoCard:hover {
+  background-color: #282828;
+  transition: 0.35s ease-in-out;
+  transform: translateY(-20px);
+}
+
+.videoCard:active {
+  transform: scale(0.95); 
+}
+ 
+.backButn {
+  width: 175px;
+}
+
+.backButn:hover {
+  color: white;
+  background-color: #1db954;
+}
+
+.card-media {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+
+.card-content {
+  padding: 500px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-channel {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  margin-bottom: 15px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play-icon {
+  color: #1db954;
+  transition: transform 0.3s;
+}
+
+.videoCard:hover .play-icon {
+  transform: scale(1.2);
+}
+
+.favorite-icon {
+  color: #fd0000;
+  transition: color 0.3s;
+}
+
+.favorite-icon:hover {
+  color: #1db954;
+}
+
+/* 플레이어 스타일 */
+.player-container {
+  position: fixed;
+  bottom: 1.5%;
+  left: 25%;
+  width: 50%;
+  background: linear-gradient(135deg, #181818, #1a1a1a, #0d4a00);
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  z-index: 1000;
+}
+.player-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.player-info img {
+  width: 65px;
+  height: 65px;
+  object-fit: fill;
+  margin-right: 15px;
+  border-radius: 15px;
+}
+
+.info-text {
+  overflow: hidden;
+}
+
+.title {
+  font-size: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  margin-top: 5px;
+}
+
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.control-icon {
+  color: #ffffff;
+}
+
+.play-pause-icon {
+  font-size: 2rem;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  width: 15%;
+}
+
+/* 볼륨바 스타일 */
+.volume-slider {
+  width: 100px;  
+}
