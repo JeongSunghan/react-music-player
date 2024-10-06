@@ -8,7 +8,7 @@
   }
   
   .home-title {
-    font-size: 5rem;
+    font-size: 3rem;
     color: #ffffff;
     margin-bottom: 50px;
     font-weight: bold;
@@ -35,12 +35,13 @@
   }
   
   .genre-button:hover {
-    background-color: #1ed760;
-    transform: scale(1.05);
+    background-color: #1db954;
+    transform: scale(1.15);
+    transition: 0.35s ease-out;
   }
   
   .genre-button:focus {
     outline: none;
-    background-color: #1aa34a;
+    background-color: #519468;
   }
   

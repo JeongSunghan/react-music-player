@@ -2,7 +2,10 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import '../style/HomeScreen.css';
 
-const genres = [ '어쿠스틱', '인디', '지브리', '로파이', '발라드', '팝', '힙합', 'R&B', 'K-POP',];
+const genres = [ '어쿠스틱', '인디', '지브리', '로파이', 
+  '발라드', '팝', '힙합', 'R&B', 'K-POP', 'Phonk', 
+  `BGM`, '광고없는'
+];
 
 const HomeScreen = ({ onSelectGenre }) => {
   return (
