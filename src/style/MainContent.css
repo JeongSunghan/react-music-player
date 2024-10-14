@@ -17,20 +17,20 @@
   border-radius: 8px;
   overflow: hidden;
   color: white;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.35s ease-in-out;
   transform: translateY(0px);
 }
 
 .videoCard:hover {
   background-color: #282828;
-  transition: 0.35s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: translateY(-20px);
 }
 
 .videoCard:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
- 
+
 .backButn {
   width: 175px;
 }
@@ -47,18 +47,17 @@
 }
 
 .card-content {
-  padding: 500px;
+  padding: 10px;
 }
 
 .card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ffffff;
-  line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: white;
+  display: block;
+  width: 100%;
   white-space: nowrap;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card-channel {
@@ -73,9 +72,9 @@
   align-items: center;
 }
 
-.play-icon {
+.play-icon:hover {
   color: #1db954;
-  transition: transform 0.3s;
+  transition: transform 1.5s ease-in-out;
 }
 
 .videoCard:hover .play-icon {
@@ -91,7 +90,7 @@
   color: #1db954;
 }
 
-/* 플레이어 스타일 */
+/* 뮤직플레이어 스타일 */
 .player-container {
   position: fixed;
   bottom: 1.5%;
@@ -105,6 +104,7 @@
   color: #ffffff;
   z-index: 1000;
 }
+
 .player-info {
   display: flex;
   align-items: center;
@@ -125,7 +125,7 @@
 }
 
 .title {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
@@ -169,5 +169,117 @@
 
 /* 볼륨바 스타일 */
 .volume-slider {
-  width: 100px;  
+  width: 100px;
+}
+
+/* 넘치는 텍스트에만 애니메이션 적용 */
+.videoCard:hover .scrolling-text {
+  width: 200%;  
+  display: inline-block;
+  animation: scrolling-text 15s linear infinite;
+  white-space: nowrap;
+  position: relative;
+}
+
+@keyframes scrolling-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* 반응형 디자인 */
+/* 태블릿 기기 (최대 너비: 768px) */
+@media screen and (max-width: 768px) {
+  .video-list-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .videoCard {
+    width: calc(50% - 20px); /* 한 줄에 두 개의 카드 */
+  }
+
+  .card-media {
+    height: 150px;
+  }
+
+  .player-container {
+    left: 10%;
+    width: 80%;
+    bottom: 10px;
+  }
+
+  .player-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .volume-container {
+    width: 20%;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .artist {
+    font-size: 0.7rem;
+  }
+
+  .play-pause-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* 모바일 기기 (최대 너비: 480px) */
+@media screen and (max-width: 480px) {
+  .video-list-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .videoCard {
+    width: 100%; /* 한 줄에 하나의 카드 */
+  }
+
+  .card-media {
+    height: 120px;
+  }
+
+  .player-container {
+    left: 0;
+    width: 95%;
+    bottom: 0;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .player-info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .volume-container {
+    display: none; /* 작은 화면에서 볼륨 컨트롤 숨김 */
+  }
+
+  .player-controls {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 0.7rem;
+  }
+
+  .artist {
+    font-size: 0.6rem;
+  }
+
+  .play-pause-icon {
+    font-size: 1.5rem;
+  }
 }
