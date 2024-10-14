@@ -59,5 +59,8 @@ YouTube에서 다양한 음악 장르를 탐색하고 재생할 수 있는 반�
 ## 🖥️ **화면 미리보기**
 
 - **홈 화면**: 사용자는 다양한 장르의 음악을 선택할 수 있습니다.
+![장르 선택](https://github.com/user-attachments/assets/beb73991-3f7a-46ba-b58a-2b2dfd4e64f9)
 
 - **플레이어 화면**: 선택한 음악을 재생하며, 재생 제어(재생, 일시정지, 다음 곡, 음소거) 및 볼륨 조절이 가능합니다.
+- ![진입 화면](https://github.com/user-attachments/assets/43295f87-21f1-47cd-acb6-8466fd90f020)
+![음악 재생 시 플레이어 생성](https://github.com/user-attachments/assets/8709e0f2-4c8c-4cf7-8238-7ad6bdc509af)
